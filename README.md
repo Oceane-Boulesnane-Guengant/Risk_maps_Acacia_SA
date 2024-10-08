@@ -9,7 +9,7 @@ The R codes are organised into 5 R scripts that source each other to perform dif
 Above is a description of each document in the three files: data, code and results.
 
 
-### Data
+### DATA ###
 
 - distrib_acacia_QDS.csv
 Raw data of Acacia occurrence from Botella et al., 2022 (https://doi.org/10.5281/zenodo.7679106), and modified on QGIS (version 3.34.2) to include QDS information only and filter for South African records (GITHUB/) 
@@ -25,15 +25,15 @@ South Africa Boundary
 
 
 
-### Code
+### CODE ###
 
 - 01_prepa_metrics_within_sp.R 
 
-#### OBJECTIVE
+##### Objective
 Aggregate the impact score per Acacia species (within species) according to different metrics (maximum, sum of maximum per mechanisms, the mean and the weighted mean). Rank species according to their importance of impact per metric
 
 
-#### OUTCOME 
+##### OUTCOME 
 Two dataframe used in "code/02_for_prepa_across_sp.R"
 	eicat_within_sp: Impact score values per species according to the different aggregation approaches
 	sp_rangs: Rang of each species according to the different aggregation approaches
@@ -42,10 +42,10 @@ Additionaly, two other data (eicat_within_sp and sp_rangs are extracted to produ
 
 - 02_for_prepa_across_sp.R 
 
-#### OBJECTIVE 
+##### Objective 
 Preparation of the distribution data of Acacia alien species in South Africa. Raw data of Acacia occurrence came from Botella et al., 2022 (https://doi.org/10.5281/zenodo.7679106), and have been previously modified on QGIS (version 3.34.2) to include QDS information only and filter for South African records
 
-#### OUTCOME 
+##### Outcome 
 Tree dataframe with:
 	data.distrib: QDS ID for each Acacia species
 	eicat_within_sp: Overall impact score per species according to the metric used
@@ -58,11 +58,11 @@ One function:
 
 - 03_prepa_metrics_across_sp.R 
 
-#### OBJECTIVE 
+##### Objective 
 Assign for each QDS (per grid cell) the species richness and the impact score according to the metric used. This is directly used to create risk maps and species richness maps
 
 
-#### OUTCOME 
+##### Outcome 
 Two dataframe:
 	impact_data_qds: Impact values per grid cell (QDS)
 	SR: Species richness per grid cell (QDS)
@@ -70,50 +70,54 @@ The data are extracted to create the risk maps and species richness map on QGIS
 
 - 04_visualised_risk_maps.R 
 
-#### OBJECTIVE 
+##### Objective 
 Visualisation in R of the species richness maps and risk maps according to the aggregated impact score. The final risk maps in the main text was produced with QGIS (version 3.34.2)
 
-#### OUTCOME 
+##### Outcome 
 Species richness maps and Risk maps of the six different approaches
 
 -  05_Graph_metric_across_species.R 
 
-#### OBJECTIVE 
+##### Objective 
 Visualisation of distribution values of each approches and calculation of the correlation between the different approaches
 
-#### OUTCOME 
+##### Outcome 
 	Density plot for each approaches and the species richness
 	Correlation values and plot for each approaches
 
-
-
-
-
-
-### Outcome
+### OUTCOME ###
 The different data present in the outcome file provide from the different R scripts presented above:
 
 - max_mean_sum_per_sp.csv: 
+
 Impact score per species for each aggregation approaches. Have been used to produce Table 4 in the main text
+
 Produce in 01_prepa_metrics_within_sp.R
 
 
 - rang_sp_metrics.csv: 
 Rang of each species according to the different aggregation approaches. Have been used to produce Table 4 in the main text.
+
 Produce in 01_prepa_metrics_within_sp.R
 
 
 - species_richness_R_data_SIG.csv:
+
 Species richness of Acacia per grid cell (QDS) in South Africa. Have been used to create the risk maps and species richness map on QGIS
+
 Produce in 03_prepa_metrics_across_sp.R
 
 
 - metric_QDS_R_data_SIG.csv
+
 Impact values per grid cell (QDS) for each aggregation approaches. Have been used to create the risk maps and species richness map on QGIS (Figure 3 and 4 on the main text)
+
 Produce in 03_prepa_metrics_across_sp.R
 
 
 - corrplot_metrics.png
+
 Correlation plot of each aggregation approach. Have been used for Figure 5 in the main
+
 Produce in 05_Graph_metric_across_species.R
  
