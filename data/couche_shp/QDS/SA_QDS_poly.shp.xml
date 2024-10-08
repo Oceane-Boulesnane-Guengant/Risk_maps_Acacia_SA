@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="fr"><Esri><CreaDate>20221024</CreaDate><CreaTime>08491200</CreaTime><ArcGISFormat>1.0</ArcGISFormat><SyncOnce>TRUE</SyncOnce><DataProperties><lineage><Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Conversion Tools.tbx\RasterToPolygon" Date="20221024" Time="084912">RasterToPolygon SA_QDS D:\CIRAD\projet\PNR_SANPARKS\Action6_CC\GIS\SA_QDS_poly.shp NO_SIMPLIFY VALUE SINGLE_OUTER_PART #</Process></lineage></DataProperties></Esri></metadata>
