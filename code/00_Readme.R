@@ -23,7 +23,7 @@ install.packages(c("dplyr","stringr", "purrr", "sf", "tmap", "ggplot2", "corrplo
 # Description
 ################################################################################
 
-# The present digital archive is the outcome of the paper: Boulesnane-Guengant, O, Rouget, R, Becker-Scarpitta, A, Botella, C, Kumschick, S. A conceptual framework for spatialising the ecological impact of alien species, Method in Ecology and Evolution.
+# The present digital archive is the outcome of the paper: A conceptual framework for spatialising the ecological impact of alien species, Method in Ecology and Evolution.
 
 # This project contains several R scripts for data analysis. The scripts are organised into modules that source each other to perform different data processing and analysis steps.
 
@@ -37,12 +37,12 @@ install.packages(c("dplyr","stringr", "purrr", "sf", "tmap", "ggplot2", "corrplo
 ################################################################################
 
 # distrib_acacia_QDS.csv
-	# Raw data of Acacia occurrence from Botella et al., 2022 (https://doi.org/10.5281/zenodo.7679106), and modified on QGIS (version 3.34.2) to include QDS information only and filter for South African records (GITHUB/) 
+	# Raw data of Acacia occurrence from Botella et al., 2022 (https://doi.org/10.5281/zenodo.7679106), and modified on QGIS (version 3.34.2) to include QDS information only and filter for South African records (https://github.com/Oceane-Boulesnane-Guengant/Risk_maps_Acacia_SA) 
 
 
 
 # 241008_eicat_metrics_Acacia_SA.csv
-	# EICAT impact data of Acacia present in South Africa have been compiled and modified from Jensan & Kumschick, and GISD (GITHUB) 
+	# EICAT impact data of Acacia present in South Africa have been compiled and modified from Jensan & Kumschick, and GISD (https://github.com/Oceane-Boulesnane-Guengant/Risk_maps_Acacia_SA) 
 
 
 
