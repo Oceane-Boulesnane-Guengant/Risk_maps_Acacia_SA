@@ -8,37 +8,30 @@ The present repository contains data, outcome and R codes for running the analys
 The R codes are organised into 5 R scripts that source each other to perform different data processing and analysis steps.
 Above is a description of each document in the three files: data, code and results.
 
-################################################################################
-# Data
-################################################################################
 
-# distrib_acacia_QDS.csv
-	# Raw data of Acacia occurrence from Botella et al., 2022 (https://doi.org/10.5281/zenodo.7679106), and modified on QGIS (version 3.34.2) to include QDS information only and filter for South African records (GITHUB/) 
+### Data
 
+- distrib_acacia_QDS.csv
+Raw data of Acacia occurrence from Botella et al., 2022 (https://doi.org/10.5281/zenodo.7679106), and modified on QGIS (version 3.34.2) to include QDS information only and filter for South African records (GITHUB/) 
 
+- 241008_eicat_metrics_Acacia_SA.csv
+EICAT impact data of Acacia present in South Africa have been compiled and modified from Jensan & Kumschick, and GISD (GITHUB) 
 
-# 241008_eicat_metrics_Acacia_SA.csv
-	# EICAT impact data of Acacia present in South Africa have been compiled and modified from Jensan & Kumschick, and GISD (GITHUB) 
-
-
-
-# Files "couche_shp" contain two type of shapefile, and are only used to visualise risk maps (04_visualised_risk_maps.R script)
-	# South Africa Quarter Degree Share (QDS)
-	# South Africa Boundary
+- Files "couche_shp" contain two type of shapefile, and are only used to visualise risk maps (04_visualised_risk_maps.R script)
+South Africa Quarter Degree Share (QDS)
+South Africa Boundary
 
 
 
 
 
-################################################################################
-# Code
-################################################################################
+### Code
 
-# 01_prepa_metrics_within_sp.R --------------------------------------------
+#### 01_prepa_metrics_within_sp.R --------------------------------------------
 source("code/01_prepa_metrics_within_sp.R")
 
-#### OBJECTIVE ####
-# Aggregate the impact score per Acacia species (within species) according to different metrics (maximum, sum of maximum per mechanisms, the mean and the weighted mean). Rank species according to their importance of impact per metric
+*** OBJECTIVE ***
+Aggregate the impact score per Acacia species (within species) according to different metrics (maximum, sum of maximum per mechanisms, the mean and the weighted mean). Rank species according to their importance of impact per metric
 
 
 #### OUTCOME ####
