@@ -1,6 +1,6 @@
 ################################################################################
 # 
-# Script for the manuscript "A conceptual framework for spatialising the ecological impacts of alien species into risk maps"  													 
+# Script for the manuscript "Spatialising the ecological impacts of alien species into risk maps"  													 
 #																																							 
 ################################################################################
 
