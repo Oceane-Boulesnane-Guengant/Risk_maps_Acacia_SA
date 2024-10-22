@@ -78,8 +78,8 @@ corrplot(data_matrix,
 ################################# SAVE DATA ####################################
 
 # Image extraction to produce Figure 4 in the main text
-saved_plot <- recordPlot()
-png("results/corrplot_metrics.png", width = 684, height = 392)
-replayPlot(saved_plot)
-dev.off()
+# saved_plot <- recordPlot()
+# png("results/corrplot_metrics.png", width = 684, height = 392)
+# replayPlot(saved_plot)
+# dev.off()
 
