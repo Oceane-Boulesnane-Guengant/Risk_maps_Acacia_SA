@@ -1,12 +1,12 @@
 ################################################################################
 # 
-# Script for the manuscript "A conceptual framework for spatialising the ecological impacts of alien species into risk maps"  													 
+# Script for the manuscript "Spatialising the ecological impacts of alien species into risk maps"  													 
 #																																							 
 ################################################################################
 
 # Date: 2024/12/01
 
-# Objective: Create a data with each aggregated impact score per grid cell to create risk maps and species richness maps
+# Objective: Create a data with each aggregated impact score per grid cell to create risk maps and species richness map
 	# Script to run: "02_for_prepa_across_sp.R"
 	# Script used for: 
       # "04_visualised_risk_maps.R"
@@ -60,9 +60,9 @@ impact_data_qds <- reduce(list_data, inner_join, by = "id")
 ######################### SAVE DATA AND CLEAN SCRIPT ###########################
 
 # Save data ---------------------------------------------------------------
-# These data set are used in QGIS to create final version of the risk maps. But could be visualised in R with script "04_visualised_risk_maps.R"
-# write.csv2(SR, file = "outcome/species_richness_R_data_SIG.csv", row.names = F)
-# write.csv2(impact_data_qds, file = "outcome/metric_QDS_R_data_SIG.csv", row.names = F)
+# These data set are used in QGIS to create the final version of the risk maps. But could be visualised in R with script "04_visualised_risk_maps.R"
+# write.csv2(SR, file = "results/species_richness_R_data_SIG.csv", row.names = F)
+# write.csv2(impact_data_qds, file = "results/metric_QDS_R_data_SIG.csv", row.names = F)
 
 
 # Clean script for "05_graph_matrics_across_species.R" -----------------------
