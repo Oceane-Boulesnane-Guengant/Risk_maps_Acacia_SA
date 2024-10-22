@@ -6,7 +6,7 @@
 
 # Date: 2024/12/01
 
-# Objective: Calculate the maximum, sum of maximum per mechanisms, the mean and the weighted mean impact score per Acacia species
+# Objective: Calculate the maximum, the sum of maximum per mechanism, the mean and the weighted mean impact score per Acacia species
 
 
 
@@ -39,11 +39,6 @@ eicat_metrics <- read.csv2("data/241008_eicat_metrics_Acacia_SA.csv", stringsAsF
 	# 4. proba: numerical values of the probability that the impact is in the right category (for the weighted mean)
 
 
-
-
-
-
-
 # Convert data type if needed
 eicat_metrics$proba <- as.numeric(eicat_metrics$proba)
 
@@ -60,7 +55,7 @@ max <- eicat_metrics %>%
 	group_by(code_name) %>%
 	summarise(max_eicat = max(eicat))
 
-## Sum of the maximum score per mechanisms, per sp
+## Sum of the maximum score per mechanism and species
 sum_max_mecha <- function(data){
 	# Separate into several columns when one line have several impact mechanisms
 	data_sp_meca <- as.data.frame(str_split(data$mechanism, "; ", simplify = T))
@@ -83,9 +78,7 @@ sum_max_mecha <- function(data){
 	V4 <- select(data_sp_meca, code_name, eicat, V4)
 	names(V4)[3] <- "mechanism"
 	
-	data_sp_meca2 <- rbind(V1, V2)
-	data_sp_meca2 <- rbind(data_sp_meca2, V3)
-	data_sp_meca2 <- rbind(data_sp_meca2, V4)
+	data_sp_meca2 <- rbind(V1, V2, V3, V4)
 	
 	# Delete NA
 	data_sp_meca2 <- na.omit(data_sp_meca2)
@@ -122,12 +115,12 @@ eicat_within_sp <- merge(eicat_within_sp, w.mean.eicat, by = "code_name")
 rm(max, mean, max_sum, w.mean.eicat)
 
 # Ranking species according to their overall impact score per metrics
-sp_rangs <- eicat_within_sp %>%
-	mutate(Rang_Max = dense_rank(-max_eicat),
-				 Rang_Mean = dense_rank(-mean_eicat),
-				 Rang_W.mean.eicat = dense_rank(-wemean_eicat),
-				 Rang_Sum_Max = dense_rank(-max.sum_eicat)) %>%
-	select(code_name, Rang_Max, Rang_Mean, Rang_W.mean.eicat, Rang_Sum_Max) 
+sp_ranks <- eicat_within_sp %>%
+	mutate(Rank_Max = dense_rank(-max_eicat),
+				 Rank_Mean = dense_rank(-mean_eicat),
+				 Rank_W.mean.eicat = dense_rank(-wemean_eicat),
+				 Rank_Sum_Max = dense_rank(-max.sum_eicat)) %>%
+	select(code_name, Rank_Max, Rank_Mean, Rank_W.mean.eicat, Rank_Sum_Max) 
 
 
 
@@ -137,8 +130,8 @@ sp_rangs <- eicat_within_sp %>%
 
 # Save data ---------------------------------------------------------------
 # Data extraction to produce Table 4 in the main text
-# write.csv2(eicat_within_sp, file = "outcome/max_mean_sum_per_sp.csv", row.names = F)
-# write.csv2(sp_rangs, file = "outcome/rang_sp_metrics.csv", row.names = F)
+# write.csv2(eicat_within_sp, file = "results/max_mean_sum_per_sp.csv", row.names = F)
+# write.csv2(sp_ranks, file = "results/rank_sp_metrics.csv", row.names = F)
 
 
 # Clean script for "02_for_prepa_across_sp.R" --------------------------------
