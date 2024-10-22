@@ -6,7 +6,7 @@
 
 # Date : 2024/05/30
 
-# Objective: Preparation of the distribution data of Acacia. Raw data of Acacia occurrence came from Botella et al., 2022 (https://doi.org/10.5281/zenodo.7679106), and have been prevriously modified on QGIS to include QDS information only and filter for South African records
+# Objective: Preparation of the distribution data of Acacia. Raw data of Acacia occurrence came from Botella et al., 2022 (https://doi.org/10.5281/zenodo.7679106), and have been previously modified on QGIS to include QDS information only and filter for South African records
 	# Script needed to run: "01_prepa_metrics_within_sp.R"
 	# Script used for: 
        # "03_prepa_metric_across_sp.R"
@@ -89,6 +89,6 @@ data.distrib <- data.distrib %>% select(code_name, id)
 ################################# CLEAN SCRIPT #################################
 
 # Clean script for "03_prepa_metrics_across_sp.R" -------------------------
-rm(sp_rangs)
+rm(sp_ranks)
 
 
