@@ -1,12 +1,12 @@
 ################################################################################
 # 
-# Script for the manuscript "A conceptual framework for spatialising the ecological impacts of alien species into risk maps"  													 
+# Script for the manuscript "Spatialising the ecological impacts of alien species into risk maps"													 
 #																																							 
 ################################################################################
 
 # Date: 2024/08/12
 
-# Objective: This script aim at a quick Visualisation in R of the risk maps according to the aggregated impact score. The final risk maps in the main text was produced with QGIS.
+# Objective: This script aim at a quick visualisation in R of the risk maps according to the aggregated impact score. The final risk maps in the main text was produced with QGIS.
    # Script to run: "03_prepa_metrics_across_sp.R"
 
 
